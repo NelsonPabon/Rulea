@@ -1,0 +1,152 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between; /* Espacio entre la ruleta y la parte izquierda */
+    align-items: center;
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wheel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la ruleta */
+#wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid #00000000;
+    position: relative;
+    background-image: url('wheel-gradient.png'); /* La imagen de la ruleta */
+    background-size: cover;
+    background-position: center;
+    transition: transform 4s ease-out, border-color 0.3s;
+    display: block; /* Asegurando visibilidad para la impresión */
+}
+
+/* Estilo del botón */
+#spin-button, #print-button, #reset-button {
+    background-color: #d78c9c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+#spin-button:hover, #print-button:hover, #reset-button:hover {
+    background-color: #b45f7c;
+}
+
+/* Estilos para la parte de la izquierda */
+#info {
+    height: auto;
+    width: 700px; /* Ajustamos el tamaño */
+    margin-bottom: 20px; /* Espacio abajo de la imagen */
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block; /* Centrar la imagen */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Información de la compra */
+.info p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Centrado de botones */
+button {
+    margin-top: 20px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Puntero de la ruleta */
+.pointer {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #c92727;
+    z-index: 10;
+}
+
+/* Estilos para impresión */
+@media print {
+    #spin-button,
+    #print-button {
+        display: none; /* Ocultar botones en la impresión */
+    }
+
+    #wheel {
+        display: block; /* Aseguramos que la ruleta se vea */
+    }
+
+    #info {
+        display: none; /* Ocultar la imagen en la impresión */
+    }
+}
+
+/* Estilos del contenedor de la izquierda */
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+/* Contenedor de los botones al lado */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin-top: 10px;
+}
+
+#reset-button, #print-button {
+    margin-top: 10px;
+    margin-left: 10px; /* Espacio entre botones */
+    margin-right: 10px; /* Espacio entre botones */
+    flex: 1; /* Hacer que los botones ocupen el mismo espacio */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANDYE - Ruleta de Descuentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Ruleta -->
+        <div class="wheel-container">
+            <div class="pointer"></div>
+            <img id="wheel" src="wheel-gradient.png" alt="Ruleta de descuentos" class="wheel">
+            <button id="spin-button">Girar Ruleta</button>
+        </div>
+
+        <!-- Información sobre la compra -->
+        <div class="info">
+            <p id="purchase-date">Día de la compra:</p>
+            <p id="discount-date">Descuento válido hasta:</p>
+            <p id="text-info">Cliente:______________________________________</p>
+            <p id="text-info">C.C:______________________________________</p>
+        </div>
+    </div>
+
+    <!-- Contenedor de la parte izquierda con la imagen y los botones -->
+    <div class="left-container">
+        <img id="info" src="image.png" alt="info" class="info"> <!-- Imagen en la parte superior -->
+        <div class="button-container">
+            <!--<button id="reset-button">Reiniciar Página</button>-->
+            <button id="print-button">Imprimir Página</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
