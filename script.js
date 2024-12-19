@@ -122,7 +122,7 @@ function printPage() {
 spinButton.addEventListener("click", spinWheel);
 
 // Agregar evento al botón de imprimir
-printButton.addEventListener("click", printPage);
+//printButton.addEventListener("click", printPage);
 
 // Agregar el evento para el botón de reiniciar
 const resetButton = document.getElementById("reset-button");
